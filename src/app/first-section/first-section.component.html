@@ -1,0 +1,20 @@
+<div [class.hide-overflow]="hideOverflow" class="section-container">
+    <div class="image-container">
+        <img [@divState] (@divState.start)="animationStarted()" (@divState.done)="animationEnded()"
+            src="assets/img/first-section.jpg" alt="">
+    </div>
+    <div [@textZoomOut] class="text-container">
+        <h2>I AM<br>OLIVER MÄNDER</h2>
+        <span>
+            German front-end developer
+        </span>
+    </div>
+    <div class="read-more">
+        <div class="read-more-rel desktop">
+            <a href="#about-me"><img src="assets/img/read-more-arrow-white.svg"></a>
+        </div>
+        <div class="read-more-rel mobile">
+            <a href="#about-me"><img src="assets/img/read-more-arrow.svg"></a>
+        </div>
+    </div>
+</div>

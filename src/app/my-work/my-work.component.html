@@ -1,0 +1,21 @@
+<div class="my-work-container">
+    <h2>My work</h2>
+</div>
+<div class="project" *ngFor="let project of projects; let i = index;">
+    <div class="picture-and-text">
+        <div (click)="openProductLink(i)" class="project-img-container clickable">
+            <img src="{{ project.image }}">
+        </div>
+        <div class="project-text-container">
+            <h3>{{ project.name }}</h3>
+            <p [innerHTML]="project.description"></p>
+            <p class="highlight">{{ project.techniques }}</p>
+            <div class="my-work-buttons">
+                <button (click)="openJSDocLink(i)" mat-stroked-button color="primary">JS Doc</button>
+                <button (click)="openGithubLink(i)" mat-stroked-button color="primary">Github</button>
+                <button (click)="openProductLink(i)" mat-flat-button color="primary">Try it
+                    out</button>
+            </div>
+        </div>
+    </div>
+</div>

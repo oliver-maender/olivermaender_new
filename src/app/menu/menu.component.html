@@ -1,0 +1,28 @@
+<mat-toolbar [class.mobile-toolbar-opened]="opened" class="mat-toolbar-container">
+    <mat-toolbar-row>
+        <div class="logo-container">
+            <a href="#first-section"><img src="assets/img/logo.png"></a>
+        </div>
+        <div class="menu-links">
+            <a href="#first-section">HOME</a>
+            <a href="#about-me">ABOUT ME</a>
+            <a href="#my-work">MY WORK</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <button mat-icon-button class="menu-icon" (click)="toggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mobile-toolbar margin-top" *ngIf="opened">
+        <a href="#first-section" (click)="toggleSidenav()">HOME</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mobile-toolbar" *ngIf="opened">
+        <a href="#about-me" (click)="toggleSidenav()">ABOUT ME</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mobile-toolbar" *ngIf="opened">
+        <a href="#my-work" (click)="toggleSidenav()">MY WORK</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mobile-toolbar" *ngIf="opened">
+        <a href="#contact" (click)="toggleSidenav()">CONTACT</a>
+    </mat-toolbar-row>
+</mat-toolbar>

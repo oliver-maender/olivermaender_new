@@ -1,0 +1,155 @@
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    height: 80px;
+    background-color: white;
+    z-index: 500;
+    transition: height 225ms ease-in-out;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.mat-toolbar-container {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    // z-index: 1;
+    animation: fadeIn 1000ms ease-in-out;
+
+    &:first-child {
+        height: 80px;
+        justify-content: space-between;
+    }
+}
+
+.logo-container {
+    height: 80px;
+
+    img {
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.menu-links,
+.mobile-toolbar {
+    a {
+        color: black;
+        text-decoration: none;
+        margin-left: 32px;
+        opacity: 0.4;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+}
+
+.mobile-toolbar {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.margin-top {
+    margin-top: 32px;
+}
+
+.margin-bottom {
+    margin-bottom: 32px;
+}
+
+.german-colors {
+    background: linear-gradient(black 0%, red 50%, yellow 100%);
+}
+
+.english-colors {
+    background: linear-gradient(white 0%, red 50%, white 100%);
+}
+
+.language-option {
+    color: white !important;
+    padding: 4px;
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+}
+
+.margin-to-links {
+    margin-left: 64px !important;
+}
+
+@media (max-width: 1050px) {
+    .mobile-toolbar {
+        display: flex;
+
+        a {
+            margin-left: 0;
+        }
+
+    }
+
+    .mat-toolbar-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mobile-toolbar-opened {
+        height: 512px;
+
+        mat-toolbar-row {
+            &:first-child {
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+            }
+        }
+
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            height: 50%;
+        }
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .margin-to-links {
+        margin-left: 0 !important;
+        margin-top: 64px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

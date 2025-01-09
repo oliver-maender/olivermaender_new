@@ -1,0 +1,40 @@
+<div class="about-me-container">
+    <!-- <div class="picture-and-text"> -->
+    <!-- <div class="picture-container">
+        <img src="assets/img/about-me.jpg">
+      </div> -->
+    <div class="text-and-skills">
+        <div class="text">
+            <h2>About me</h2>
+            <span>My name is Oliver Mänder. I am 26 years old and a German front-end developer
+                living at Lake Constance. I
+                joined the <span class="highlight"><a class="highlight" href="https://www.developerakademie.com/"
+                        target="_blank">Developer
+                        Akademie</a></span> in <span class="highlight">January 2021</span> where I started learning my
+                main skills <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span
+                    class="highlight">JavaScript</span> and <span class="highlight">Angular</span>. My
+                interests are everything that has to do
+                with
+                computers and other technical devices + watching different kinds of sports like
+                American Football, Soccer,
+                Motorsports, Basketball and more.</span>
+        </div>
+        <div class="skills-overview">
+            <div class="skill" *ngFor="let skill of skills; let i = index;">
+                <div class="skill-name">
+                    <span>{{ skill.name }}</span>
+                </div>
+                <div class="skill-amount">
+                    <mat-progress-bar mode="determinate" [value]="skill.amount"></mat-progress-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <div class="read-more">
+        <div class="read-more-rel">
+            <span>Want to learn more about my work?</span>
+            <a href="#my-work"><img src="assets/img/read-more-arrow.svg"></a>
+        </div>
+    </div>
+</div>
